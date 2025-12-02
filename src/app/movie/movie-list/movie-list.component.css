@@ -2,6 +2,10 @@ img.poster-img {
   max-width: 250px;
 }
 
+body {
+  background-color: aqua;
+}
+
 tr:hover {
   background-color: rgb(173, 198, 230);
   cursor: pointer;
@@ -9,4 +13,15 @@ tr:hover {
 
 thead {
   background-color: palevioletred;
+}
+
+.table {
+  gap: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
 }

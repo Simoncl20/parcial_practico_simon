@@ -1,17 +1,34 @@
-<div>
-  <h2>{{ movie?.title }}</h2>
+<div class="container">
+  <div class="info">
+    <h2 class="title">{{ movie?.title }}</h2>
+    <div>
+      <div>
+        <div>
+          <p><strong>Sinopsis:</strong></p>
+          <p>{{ movie?.description }}</p>
+        </div>
+        <hr class="line" />
+        <div class="info-detail">
+          <div>
+            <p><strong>Director:</strong> {{ movie?.director }}</p>
+            <p><strong>Calificación:</strong> {{ movie?.rating }}</p>
+            <p><strong>Duracion: </strong>{{ formatDuration(movie?.duration) }}</p>
+          </div>
+          <div>
+            <p><strong>Año de lanzamiento:</strong> {{ movie?.releaseYear }}</p>
+            <p><strong>Género:</strong> {{ movie?.genre }}</p>
+          </div>
+        </div>
+
+        <hr class="line" />
+      </div>
+      <div>
+        <h3>Reparto:</h3>
+        <app-actor-list [actors]="movie?.cast"></app-actor-list>
+      </div>
+    </div>
+  </div>
   <div>
     <img class="poster-detail-img" [src]="movie?.posterImageUrl" alt="{{ movie?.title }} poster" />
-  </div>
-  <div>
-    <p><strong>Director:</strong> {{ movie?.director }}</p>
-    <p><strong>Año de lanzamiento:</strong> {{ movie?.releaseYear }}</p>
-    <p><strong>Calificación:</strong> {{ movie?.rating }}</p>
-    <p><strong>Género:</strong> {{ movie?.genre }}</p>
-    <p><strong>Sinopsis:</strong> {{ movie?.description }}</p>
-  </div>
-  <div>
-    <h3>Reparto:</h3>
-    <app-actor-list [actors]="movie?.cast"></app-actor-list>
   </div>
 </div>

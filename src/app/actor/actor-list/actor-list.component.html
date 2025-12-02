@@ -1,5 +1,8 @@
-<ul>
-  @for(actor of actors; track actor.id) {
-  <li>{{ actor.name }}</li>
-  }
-</ul>
+<div>
+  <p><strong>Promedio de popularidad:</strong> {{ popularity }}</p>
+  <ul>
+    @for(actor of actors; track actor.id) {
+    <li>{{ actor.name }}</li>
+    }
+  </ul>
+</div>
